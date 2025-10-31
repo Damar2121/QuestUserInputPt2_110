@@ -26,6 +26,7 @@ import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.OutlinedTextField
 import androidx.compose.foundation.selection.selectable
 import androidx.compose.material3.RadioButton
+import androidx.compose.material3.Button
 
 val PurpleHeader = Color(0xFF6A00C9)
 val LightPurpleBackground = Color(0xFFF0E6FF)
@@ -182,6 +183,19 @@ fun FormPendaftaranScreen(modifier: Modifier = Modifier) {
                             singleLine = true,
                             shape = RoundedCornerShape(8.dp)
                         )
+                        Button(
+                            onClick = {
+                                // Logika submit
+                            },
+                            modifier = Modifier.fillMaxWidth(),
+                            shape = RoundedCornerShape(8.dp)
+                        ) {
+                            Text(
+                                text = "Submit",
+                                modifier = Modifier.padding(vertical = 8.dp),
+                                fontSize = 16.sp
+                            )
+                        }
 
                         }
 
