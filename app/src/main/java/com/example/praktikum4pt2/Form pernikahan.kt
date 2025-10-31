@@ -168,6 +168,21 @@ fun FormPendaftaranScreen(modifier: Modifier = Modifier) {
                         }
                         Spacer(Modifier.height(16.dp))
 
+                        Text(
+                            text = "ALAMAT",
+                            style = MaterialTheme.typography.labelMedium,
+                            color = Color.DarkGray,
+                            modifier = Modifier.padding(bottom = 8.dp)
+                        )
+                        OutlinedTextField(
+                            value = textAlamat,
+                            onValueChange = { textAlamat = it },
+                            placeholder = { Text("Alamat") },
+                            modifier = Modifier.fillMaxWidth(),
+                            singleLine = true,
+                            shape = RoundedCornerShape(8.dp)
+                        )
+
                         }
 
                     }
