@@ -9,8 +9,10 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.material3.Surface
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.Text
 import androidx.compose.ui.Alignment
@@ -22,6 +24,8 @@ import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.OutlinedTextField
+import androidx.compose.foundation.selection.selectable
+import androidx.compose.material3.RadioButton
 
 val PurpleHeader = Color(0xFF6A00C9)
 val LightPurpleBackground = Color(0xFFF0E6FF)
@@ -99,6 +103,21 @@ fun FormPendaftaranScreen(modifier: Modifier = Modifier) {
                             modifier = Modifier.padding(bottom = 8.dp)
                         )
                         Column {
+                            Row (
+                                modifier = Modifier
+                                    .fillMaxWidth()
+                                    .selectable(
+                                        selected = textJK == "Laki-laki",
+                                        onClick = { textJK = "Laki-laki" }
+                                    ),
+                                verticalAlignment = Alignment.CenterVertically
+                            ) {
+                                RadioButton(
+                                    selected = textJK == "Laki-laki",
+                                    onClick = { textJK = "Laki-laki" }
+                                )
+                                Text(text = "Laki-laki", modifier = Modifier.padding(start = 4.dp))
+                            }
 
                         }
 
