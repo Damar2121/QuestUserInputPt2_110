@@ -19,6 +19,8 @@ import androidx.compose.ui.unit.sp
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
+import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.OutlinedTextField
 
 val PurpleHeader = Color(0xFF6A00C9)
 val LightPurpleBackground = Color(0xFFF0E6FF)
@@ -66,6 +68,26 @@ fun FormPendaftaranScreen(modifier: Modifier = Modifier) {
                             .padding(horizontal = 24.dp, vertical = 32.dp),
                         horizontalAlignment = Alignment.Start
                     ) {
+                        Column(
+                            // ... (modifier)
+                        ) {
+                            // --- NAMA LENGKAP (Kode FormLabel di-inline) ---
+                            Text(
+                                text = "NAMA LENGKAP",
+                                style = MaterialTheme.typography.labelMedium,
+                                color = Color.DarkGray,
+                                modifier = Modifier.padding(bottom = 8.dp)
+                            )
+                            OutlinedTextField(
+                                value = textNama,
+                                onValueChange = { textNama = it },
+                                placeholder = { Text("Isian nama lengkap") },
+                                modifier = Modifier.fillMaxWidth(),
+                                singleLine = true,
+                                shape = RoundedCornerShape(8.dp)
+                            )
+                            Spacer(Modifier.height(16.dp))
+                        }
 
                     }
                 }
