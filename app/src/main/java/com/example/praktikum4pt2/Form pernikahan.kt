@@ -9,6 +9,7 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.material3.Surface
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.Text
@@ -90,6 +91,15 @@ fun FormPendaftaranScreen(modifier: Modifier = Modifier) {
                                 shape = RoundedCornerShape(8.dp)
                             )
                             Spacer(Modifier.height(16.dp))
+                        }
+                        Text(
+                            text = "JENIS KELAMIN",
+                            style = MaterialTheme.typography.labelMedium,
+                            color = Color.DarkGray,
+                            modifier = Modifier.padding(bottom = 8.dp)
+                        )
+                        Column {
+
                         }
 
                     }
