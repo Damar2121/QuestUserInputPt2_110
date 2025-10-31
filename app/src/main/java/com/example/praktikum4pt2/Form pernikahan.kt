@@ -34,6 +34,9 @@ fun FormPendaftaranScreen(modifier: Modifier = Modifier) {
     var textJK by remember { mutableStateOf("") }
     var textStatus by remember { mutableStateOf("") }
 
+    val genderOptions = listOf("Laki-laki", "Perempuan")
+    val statusOptions = listOf("Janda", "Lajang", "Duda")
+
     Surface(
         modifier = modifier.fillMaxSize(),
         color = LightPurpleBackground
