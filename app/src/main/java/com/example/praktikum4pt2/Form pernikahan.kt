@@ -77,7 +77,6 @@ fun FormPendaftaranScreen(modifier: Modifier = Modifier) {
                         horizontalAlignment = Alignment.Start
                     ) {
                         Column(
-                            // ... (modifier)
                         ) {
                             // --- NAMA LENGKAP (Kode FormLabel di-inline) ---
                             Text(
@@ -137,6 +136,35 @@ fun FormPendaftaranScreen(modifier: Modifier = Modifier) {
                                 Text(text = "Perempuan", modifier = Modifier.padding(start = 4.dp))
                             }
                             // Kode dari RadioItem selesai di sini
+                        }
+                        Spacer(Modifier.height(16.dp))
+
+                        Text(
+                            text = "STATUS PERKAWINAN",
+                            style = MaterialTheme.typography.labelMedium,
+                            color = Color.DarkGray,
+                            modifier = Modifier.padding(bottom = 8.dp)
+                        )
+                        Column {
+                            statusOptions.forEach { item ->
+                                // Kode dari RadioItem dimulai di sini
+                                Row(
+                                    modifier = Modifier
+                                        .fillMaxWidth()
+                                        .selectable(
+                                            selected = textStatus == item,
+                                            onClick = { textStatus = item }
+                                        ),
+                                    verticalAlignment = Alignment.CenterVertically
+                                ) {
+                                    RadioButton(
+                                        selected = textStatus == item,
+                                        onClick = { textStatus = item }
+                                    )
+                                    Text(text = item, modifier = Modifier.padding(start = 4.dp))
+                                }
+                                // Kode dari RadioItem selesai di sini
+                            }
                         }
                         Spacer(Modifier.height(16.dp))
 
