@@ -183,6 +183,8 @@ fun FormPendaftaranScreen(modifier: Modifier = Modifier) {
                             singleLine = true,
                             shape = RoundedCornerShape(8.dp)
                         )
+                        Spacer(Modifier.weight(1f))
+
                         Button(
                             onClick = {
                                 // Logika submit
