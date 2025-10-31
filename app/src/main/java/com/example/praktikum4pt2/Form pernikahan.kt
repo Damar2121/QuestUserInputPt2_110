@@ -4,6 +4,9 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.runtime.*
 import androidx.compose.ui.graphics.Color
+import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.material3.Surface
 
 val PurpleHeader = Color(0xFF6A00C9)
 val LightPurpleBackground = Color(0xFFF0E6FF)
@@ -16,4 +19,17 @@ fun FormPendaftaranScreen(modifier: Modifier = Modifier) {
     var textAlamat by remember { mutableStateOf("") }
     var textJK by remember { mutableStateOf("") }
     var textStatus by remember { mutableStateOf("") }
+
+    Surface(
+        modifier = modifier.fillMaxSize(),
+        color = LightPurpleBackground
+    ) {
+        Column(
+            modifier = Modifier.fillMaxSize()
+        ) {
+
+        }
+    }
 }
+
+
