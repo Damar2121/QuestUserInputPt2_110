@@ -51,12 +51,15 @@ fun FormPendaftaranScreen(modifier: Modifier = Modifier) {
         Column(
             modifier = Modifier.fillMaxSize()
         ) {
+            Spacer(Modifier.height(50.dp)) // Spacer-mu
+
+            // --- Bagian Header ---
             Box(
                 modifier = Modifier
                     .fillMaxWidth()
                     .background(PurpleHeader)
-                    .padding(vertical = 16.dp),
-                contentAlignment = Alignment.Center
+                    .padding(vertical = 30.dp, horizontal = 20.dp),
+                contentAlignment = Alignment.BottomStart
             ) {
                 Text(
                     text = "Formulir Pendaftaran",
@@ -64,14 +67,15 @@ fun FormPendaftaranScreen(modifier: Modifier = Modifier) {
                     fontSize = 20.sp,
                     fontWeight = FontWeight.Bold
                 )
-                Card(
-                    modifier = Modifier
-                        .fillMaxSize()
-                        .padding(16.dp),
-                    shape = RoundedCornerShape(16.dp),
-                    colors = CardDefaults.cardColors(containerColor = Color.White),
-                    elevation = CardDefaults.cardElevation(defaultElevation = 4.dp)
-                ) {
+            }
+            Card(
+                modifier = Modifier
+                    .fillMaxSize()
+                    .padding(16.dp),
+                shape = RoundedCornerShape(16.dp),
+                colors = CardDefaults.cardColors(containerColor = Color.White),
+                elevation = CardDefaults.cardElevation(defaultElevation = 4.dp)
+            ) {
                     Column(
                         modifier = Modifier
                             .fillMaxSize()
@@ -122,22 +126,7 @@ fun FormPendaftaranScreen(modifier: Modifier = Modifier) {
                                     Text(text = item, modifier = Modifier.padding(start = 4.dp))
                                 }
                             }
-                            Row(
-                                modifier = Modifier
-                                    .fillMaxWidth()
-                                    .selectable(
-                                        selected = textJK == "Perempuan",
-                                        onClick = { textJK = "Perempuan" }
-                                    ),
-                                verticalAlignment = Alignment.CenterVertically
-                            ) {
-                                RadioButton(
-                                    selected = textJK == "Perempuan",
-                                    onClick = { textJK = "Perempuan" }
-                                )
-                                Text(text = "Perempuan", modifier = Modifier.padding(start = 4.dp))
-                            }
-                            // Kode dari RadioItem selesai di sini
+
                         }
                         Spacer(Modifier.height(16.dp))
 
@@ -202,15 +191,15 @@ fun FormPendaftaranScreen(modifier: Modifier = Modifier) {
                             )
                         }
 
-                        }
-
                     }
+
                 }
             }
         }
-
-        }
     }
+
+
+
 
 
 
