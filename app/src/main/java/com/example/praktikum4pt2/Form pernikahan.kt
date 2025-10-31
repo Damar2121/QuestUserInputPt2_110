@@ -118,6 +118,24 @@ fun FormPendaftaranScreen(modifier: Modifier = Modifier) {
                                 )
                                 Text(text = "Laki-laki", modifier = Modifier.padding(start = 4.dp))
                             }
+                            Row(
+                                modifier = Modifier
+                                    .fillMaxWidth()
+                                    .selectable(
+                                        selected = textJK == "Perempuan",
+                                        onClick = { textJK = "Perempuan" }
+                                    ),
+                                verticalAlignment = Alignment.CenterVertically
+                            ) {
+                                RadioButton(
+                                    selected = textJK == "Perempuan",
+                                    onClick = { textJK = "Perempuan" }
+                                )
+                                Text(text = "Perempuan", modifier = Modifier.padding(start = 4.dp))
+                            }
+                            // Kode dari RadioItem selesai di sini
+                        }
+                        Spacer(Modifier.height(16.dp))
 
                         }
 
