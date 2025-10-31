@@ -16,6 +16,9 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.material3.Card
+import androidx.compose.material3.CardDefaults
 
 val PurpleHeader = Color(0xFF6A00C9)
 val LightPurpleBackground = Color(0xFFF0E6FF)
@@ -49,11 +52,28 @@ fun FormPendaftaranScreen(modifier: Modifier = Modifier) {
                     fontSize = 20.sp,
                     fontWeight = FontWeight.Bold
                 )
+                Card(
+                    modifier = Modifier
+                        .fillMaxSize()
+                        .padding(16.dp),
+                    shape = RoundedCornerShape(16.dp),
+                    colors = CardDefaults.cardColors(containerColor = Color.White),
+                    elevation = CardDefaults.cardElevation(defaultElevation = 4.dp)
+                ) {
+                    Column(
+                        modifier = Modifier
+                            .fillMaxSize()
+                            .padding(horizontal = 24.dp, vertical = 32.dp),
+                        horizontalAlignment = Alignment.Start
+                    ) {
+
+                    }
+                }
             }
         }
 
         }
     }
-}
+
 
 
