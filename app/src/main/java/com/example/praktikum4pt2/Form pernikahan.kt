@@ -103,20 +103,23 @@ fun FormPendaftaranScreen(modifier: Modifier = Modifier) {
                             modifier = Modifier.padding(bottom = 8.dp)
                         )
                         Column {
-                            Row (
-                                modifier = Modifier
-                                    .fillMaxWidth()
-                                    .selectable(
-                                        selected = textJK == "Laki-laki",
-                                        onClick = { textJK = "Laki-laki" }
-                                    ),
-                                verticalAlignment = Alignment.CenterVertically
-                            ) {
-                                RadioButton(
-                                    selected = textJK == "Laki-laki",
-                                    onClick = { textJK = "Laki-laki" }
-                                )
-                                Text(text = "Laki-laki", modifier = Modifier.padding(start = 4.dp))
+                            genderOptions.forEach { item ->
+                                // Kode dari RadioItem dimulai di sini
+                                Row(
+                                    modifier = Modifier
+                                        .fillMaxWidth()
+                                        .selectable(
+                                            selected = textJK == item,
+                                            onClick = { textJK = item }
+                                        ),
+                                    verticalAlignment = Alignment.CenterVertically
+                                ) {
+                                    RadioButton(
+                                        selected = textJK == item,
+                                        onClick = { textJK = item }
+                                    )
+                                    Text(text = item, modifier = Modifier.padding(start = 4.dp))
+                                }
                             }
                             Row(
                                 modifier = Modifier
